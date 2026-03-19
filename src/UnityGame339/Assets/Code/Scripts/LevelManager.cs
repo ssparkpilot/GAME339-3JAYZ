@@ -7,7 +7,33 @@ public class LevelManager : MonoBehaviour
     public Transform startPoint;
     public Transform[] path;
 
+    public int currency;
+
     private void Awake(){
         main = this;
+    }
+
+    private void Start()
+    {
+        currency = 100;
+    }
+
+    public void IncreaseCurrency(int ammount)
+    {
+        currency += ammount;
+    }
+
+    public bool SpendCurrency(int ammount)
+    {
+        if (ammount >= currency)
+        {
+            currency -= ammount;
+            return true;
+        }
+        else
+        {
+            Debug.Log("Not enough money");
+            return false;
+        }
     }
 }
