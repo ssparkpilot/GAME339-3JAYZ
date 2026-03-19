@@ -15,7 +15,7 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
     {
-        currency = 100;
+        currency = 1000;
     }
 
     public void IncreaseCurrency(int ammount)
@@ -25,7 +25,7 @@ public class LevelManager : MonoBehaviour
 
     public bool SpendCurrency(int ammount)
     {
-        if (ammount >= currency)
+        if (currency >= ammount)
         {
             currency -= ammount;
             return true;
