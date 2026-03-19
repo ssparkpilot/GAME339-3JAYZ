@@ -15,6 +15,14 @@ public class Turret : MonoBehaviour
     private Transform target;
     private float timeUntilFire;
 
+    public AudioSource audioSource;
+    public AudioClip placeSound;
+
+
+    public float minPitch = 0.8f;
+    public float maxPitch = 1.2f;
+
+
     private void Update(){
         if(target == null){
             FindTarget();
@@ -37,6 +45,11 @@ public class Turret : MonoBehaviour
         GameObject bulletObj = Instantiate(bulletPrefab, firingPoint.position, Quaternion.identity);
         Bullet bulletScript = bulletObj.GetComponent<Bullet>();
         bulletScript.SetTarget(target);
+        audioSource.pitch = Random.Range(minPitch, maxPitch);
+        //make the audiosource play at half the volume
+        audioSource.volume = 0.25f;
+        //play the place sound at the randomized pitch
+        audioSource.PlayOneShot(placeSound);
     }
 
     private void FindTarget(){

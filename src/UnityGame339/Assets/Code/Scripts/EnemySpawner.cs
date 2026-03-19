@@ -22,6 +22,15 @@ public class EnemySpawner : MonoBehaviour
     private int enemiesLeftToSpawn;
     private bool isSpawning = false;
 
+    public AudioSource audioSource;
+    public AudioClip chudSound;
+    public AudioClip startSound;
+    public AudioClip endSound;
+
+
+    public float minPitch = 0.8f;
+    public float maxPitch = 1.2f;
+
     private void Awake(){
         onEnemyDestroy.AddListener(onEnemyDestroyed);
     }
@@ -55,6 +64,11 @@ public class EnemySpawner : MonoBehaviour
         yield return new WaitForSeconds(timeBetweenWaves);
 
         isSpawning = true;
+        audioSource.pitch = Random.Range(minPitch, maxPitch);
+        //make the audiosource play at half the volume
+        audioSource.volume = 0.5f;
+        //play the place sound at the randomized pitch
+        audioSource.PlayOneShot(startSound);
         enemiesLeftToSpawn = EnemiesPerWave();
     }
 
@@ -62,11 +76,21 @@ public class EnemySpawner : MonoBehaviour
         isSpawning = false;
         timeSinceLastSpawn = 0f;
         currentWave++;
+        audioSource.pitch = Random.Range(minPitch, maxPitch);
+        //make the audiosource play at half the volume
+        audioSource.volume = 0.5f;
+        //play the place sound at the randomized pitch
+        audioSource.PlayOneShot(endSound);
         StartCoroutine(StartWave());
     }
 
     private void SpawnEnemy(){
         GameObject prefabToSpawn =  enemyPrefabs[0];
+        audioSource.pitch = Random.Range(minPitch, maxPitch);
+        //make the audiosource play at half the volume
+        audioSource.volume = 0.75f;
+        //play the place sound at the randomized pitch
+        audioSource.PlayOneShot(chudSound);
         Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
     }
 
