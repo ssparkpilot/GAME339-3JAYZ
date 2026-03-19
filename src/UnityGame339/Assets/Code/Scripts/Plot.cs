@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 public class Plot : MonoBehaviour
 {
@@ -27,9 +28,20 @@ public class Plot : MonoBehaviour
 
     private void OnMouseDown()
     {
+        if(EventSystem.current.IsPointerOverGameObject()) return; // fix for preventing tower plotting when clicking on a UI button
+
         if (tower != null) return;
 
-        GameObject towerToBuild = BuildManager.main.GetSelectedTower();
-        tower = Instantiate(towerToBuild, transform.position, Quaternion.identity);
+        Tower towerToBuild = BuildManager.main.GetSelectedTower();
+
+        if (towerToBuild.cost > LevelManager.main.currency)
+        {
+            Debug.Log("You are a broke chud!");
+            return;
+        }
+        
+        LevelManager.main.SpendCurrency(towerToBuild.cost);
+        
+        tower = Instantiate(towerToBuild.prefab, transform.position, Quaternion.identity);
     }
 }
