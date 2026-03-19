@@ -63,6 +63,12 @@ public class EnemySpawner : MonoBehaviour
     private IEnumerator StartWave() {
         yield return new WaitForSeconds(timeBetweenWaves);
 
+        audioSource.pitch = Random.Range(minPitch, maxPitch);
+        //make the audiosource play at half the volume
+        audioSource.volume = 0.5f;
+        //play the wave start sound at the randomized pitch
+        audioSource.PlayOneShot(waveStartSFX);
+
         isSpawning = true;
         audioSource.pitch = Random.Range(minPitch, maxPitch);
         //make the audiosource play at half the volume
@@ -73,6 +79,11 @@ public class EnemySpawner : MonoBehaviour
     }
 
     private void EndWave(){
+        audioSource.pitch = Random.Range(minPitch, maxPitch);
+        //make the audiosource play at half the volume
+        audioSource.volume = 0.5f;
+        //play the wave complete sound at the randomized pitch
+        audioSource.PlayOneShot(waveCompleteSFX);
         isSpawning = false;
         timeSinceLastSpawn = 0f;
         currentWave++;
@@ -92,6 +103,11 @@ public class EnemySpawner : MonoBehaviour
         //play the place sound at the randomized pitch
         audioSource.PlayOneShot(chudSound);
         Instantiate(prefabToSpawn, LevelManager.main.startPoint.position, Quaternion.identity);
+        audioSource.pitch = Random.Range(minPitch, maxPitch);
+        //make the audiosource play at half the volume
+        audioSource.volume = 0.5f;
+        //play the shoot sound at the randomized pitch
+        audioSource.PlayOneShot(chudSpawn);
     }
 
     private int EnemiesPerWave() {

@@ -12,6 +12,12 @@ public class Turret : MonoBehaviour
     [SerializeField] private float targetingRange = 3f;
     [SerializeField] private float bps = 1f; // bullets per second
 
+
+    public AudioSource audioSource;
+    public AudioClip shootSound;
+
+    public float minPitch = 0.8f;
+    public float maxPitch = 1.2f;
     private Transform target;
     private float timeUntilFire;
 
