@@ -10,6 +10,12 @@ public class EnemyMovement : MonoBehaviour
 
     private Transform target;
     private int pathIndex = 0;
+    [Header("Sprites")]
+    [SerializeField] private Sprite UpSprite;
+    [SerializeField] private Sprite DownSprite;
+    [SerializeField] private Sprite LeftSprite;
+    [SerializeField] private Sprite RightSprite;
+
 
     private void Start() {
         target = LevelManager.main.path[pathIndex];
@@ -33,5 +39,29 @@ public class EnemyMovement : MonoBehaviour
         Vector2 direction = (target.position - transform.position).normalized;
 
         rb.linearVelocity = direction * moveSpeed;
+        Debug.Log("direction X: " + direction.x + ", direction Y: " + direction.y);
+
+        //change the sprite based on the direction
+        if (Mathf.RoundToInt(direction.y) < 0&& Mathf.RoundToInt(direction.x) == 0)
+        {
+            GetComponent<SpriteRenderer>().sprite  = DownSprite;
+
+        } else if (Mathf.RoundToInt(direction.y) > 0 && Mathf.RoundToInt(direction.x) == 0) {
+            GetComponent<SpriteRenderer>().sprite  = UpSprite;
+
+        }
+         else if (Mathf.RoundToInt(direction.x) < 0) {
+            GetComponent<SpriteRenderer>().sprite  = LeftSprite;
+
+        }  else if (Mathf.RoundToInt(direction.x) > 0) {
+            GetComponent<SpriteRenderer>().sprite  = RightSprite;
+
+        }
+        else
+        {
+            //GetComponent<SpriteRenderer>().sprite  = DownSprite;
+
+        }
+        
     }
 }

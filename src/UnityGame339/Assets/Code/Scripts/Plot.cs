@@ -13,6 +13,7 @@ public class Plot : MonoBehaviour
     public AudioSource audioSource;
     public AudioClip placeSound;
 
+    public AudioClip cantplaceSound;
 
     public float minPitch = 0.8f;
     public float maxPitch = 1.2f;
@@ -44,6 +45,13 @@ public class Plot : MonoBehaviour
         if (towerToBuild.cost > LevelManager.main.currency)
         {
             Debug.Log("You are a broke chud!");
+            audioSource.pitch = Random.Range(minPitch, maxPitch);
+        //make the audiosource play at half the volume
+        
+        audioSource.volume = 0.5f;
+        //play the place sound at the randomized pitch
+        
+        audioSource.PlayOneShot(cantplaceSound);
             return;
         }
         
