@@ -1,10 +1,12 @@
 using UnityEngine;
 
-public class Health : MonoBehaviour
+public class Health : DeathEffectObject
 {
     [Header("Attributes")]
     [SerializeField] private int hitPoints = 2;
     [SerializeField] private int currencyWorth = 25;
+    
+    public GameObject FloatingScorePrefab;
     
     private bool isDestroyed = false;
 
@@ -14,6 +16,10 @@ public class Health : MonoBehaviour
         if (hitPoints <= 0 && !isDestroyed){
             EnemySpawner.onEnemyDestroy.Invoke();
             LevelManager.main.IncreaseCurrency(currencyWorth);
+            
+            CreateDeathEffect();
+            Instantiate(FloatingScorePrefab, transform.position, Quaternion.identity);
+            
             isDestroyed = true;
             Destroy(gameObject);
         }
