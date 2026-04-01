@@ -93,7 +93,7 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8314382623674587284}
-  m_Text: +50
+  m_Text: n
   m_OffsetZ: 0
   m_CharacterSize: 0.4
   m_LineSpacing: 1
@@ -119,6 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8428befce671048729b6605068989dae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FloatingText
+  textMesh: {fileID: 2584140733611713213}
   speed: 1
 --- !u!114 &6173107996845938630
 MonoBehaviour:

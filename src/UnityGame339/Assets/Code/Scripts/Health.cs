@@ -18,6 +18,10 @@ public class Health : DeathEffectObject
             LevelManager.main.IncreaseCurrency(currencyWorth);
             
             CreateDeathEffect();
+            
+            FloatingText floatingText = FloatingScorePrefab.GetComponent<FloatingText>();
+            floatingText.SetText(currencyWorth);
+
             Instantiate(FloatingScorePrefab, transform.position, Quaternion.identity);
             
             isDestroyed = true;
