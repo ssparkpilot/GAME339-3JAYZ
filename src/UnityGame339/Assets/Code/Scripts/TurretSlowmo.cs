@@ -3,7 +3,7 @@ using Unity.VisualScripting;
 using UnityEditor;
 using UnityEngine;
 
-public class TurretSlowmo : MonoBehaviour
+public class TurretSlowmo : DeathEffectObject
 {
     [Header("References")]
     [SerializeField] private LayerMask enemyMask;
@@ -14,6 +14,14 @@ public class TurretSlowmo : MonoBehaviour
     [SerializeField] private float freezeTime = 1f;
     
     private float timeUntilFire;
+
+    public AudioSource audioSource;
+    public AudioClip fireSound;
+
+
+    public float minPitch = 0.8f;
+    public float maxPitch = 1.2f;
+
     
     private void Update()
     {
@@ -29,10 +37,27 @@ public class TurretSlowmo : MonoBehaviour
 
     private void FreezeEnemies()
     {
+
+
+        
+
         RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, targetingRange, Vector2.zero, 0f, enemyMask);
 
         if (hits.Length > 0)
         {
+            
+            
+            audioSource.pitch = Random.Range(minPitch, maxPitch);
+            //make the audiosource play at half the volume
+            audioSource.volume = 0.75f;
+            //play the fire sound at the randomized pitch
+            audioSource.PlayOneShot(fireSound);
+            CreateDeathEffect();
+
+
+
+
+
             for (int i = 0; i < hits.Length; i++)
             {
                 RaycastHit2D hit = hits[i];

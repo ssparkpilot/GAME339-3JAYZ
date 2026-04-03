@@ -4191,6 +4191,7 @@ MonoBehaviour:
   enemiesPerSecond: 0.5
   timeBetweenWaves: 5
   difficultyScalingFactor: 0.75
+  enemiesPerSecondCap: 15
   audioSource: {fileID: 798997880}
   chudSound: {fileID: 8300000, guid: 9385e00179fe1af499de6862cda7f4d7, type: 3}
   startSound: {fileID: 8300000, guid: 87b95e059cfba3f4582c112ad3157b71, type: 3}
