@@ -26,6 +26,9 @@ public class EnemyMovement : MonoBehaviour
 
     
     private void Update() {
+        if (LevelManager.main.isGameOver){
+            return;
+        }
         if (Vector2.Distance(target.position, transform.position) <= 0.1f) {
             pathIndex++;
 
@@ -41,6 +44,9 @@ public class EnemyMovement : MonoBehaviour
     }
 
     private void FixedUpdate() {
+        if (LevelManager.main.isGameOver){
+            return;
+        }
         Vector2 direction = (target.position - transform.position).normalized;
 
         rb.linearVelocity = direction * moveSpeed;

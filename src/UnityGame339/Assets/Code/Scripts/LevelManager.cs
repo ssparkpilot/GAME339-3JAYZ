@@ -5,7 +5,7 @@ public class LevelManager : MonoBehaviour
 {
     [Header("Player Stats")]
     public int playerHealth = 100;
-    private bool isGameOver = false;
+    public bool isGameOver = false;
 
     [Header("UI")]
     [SerializeField] private TMP_Text healthText;
@@ -76,5 +76,6 @@ public class LevelManager : MonoBehaviour
     {
         isGameOver = true;
         Debug.Log("Game Over!");
+        Time.timeScale = 0f;
     }
 }
