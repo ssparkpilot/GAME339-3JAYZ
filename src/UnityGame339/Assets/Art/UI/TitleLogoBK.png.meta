@@ -1,0 +1,689 @@
+fileFormatVersion: 2
+guid: f2a9b231e6eed2b4bbe410a572225a92
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1131354268035179468
+    second: TitleLogoBK_0
+  - first:
+      213: 6718109340480995485
+    second: TitleLogoBK_1
+  - first:
+      213: -4761123689713570947
+    second: TitleLogoBK_2
+  - first:
+      213: 366642057596280953
+    second: TitleLogoBK_3
+  - first:
+      213: 7676604553156915946
+    second: TitleLogoBK_4
+  - first:
+      213: 5786618037741214979
+    second: TitleLogoBK_5
+  - first:
+      213: 2498551000371433065
+    second: TitleLogoBK_6
+  - first:
+      213: -3320672590160445057
+    second: TitleLogoBK_7
+  - first:
+      213: -364886031203723080
+    second: TitleLogoBK_8
+  - first:
+      213: -4226053554088493776
+    second: TitleLogoBK_9
+  - first:
+      213: 5772210435305645938
+    second: TitleLogoBK_10
+  - first:
+      213: -2467752263415411468
+    second: TitleLogoBK_11
+  - first:
+      213: -722283144639153847
+    second: TitleLogoBK_12
+  - first:
+      213: 5587819649635167575
+    second: TitleLogoBK_13
+  - first:
+      213: -4772190277411678695
+    second: TitleLogoBK_14
+  - first:
+      213: 2861446888202290242
+    second: TitleLogoBK_15
+  - first:
+      213: 4239219950143029824
+    second: TitleLogoBK_16
+  - first:
+      213: -1017029712816606025
+    second: TitleLogoBK_17
+  - first:
+      213: 8192156808792926245
+    second: TitleLogoBK_18
+  - first:
+      213: 5124352008148517065
+    second: TitleLogoBK_19
+  - first:
+      213: 8018425208883705513
+    second: TitleLogoBK_20
+  - first:
+      213: -7461661270586264946
+    second: TitleLogoBK_21
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 1
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 1
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TitleLogoBK_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 36
+        width: 47
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 43c14a2994f9c40f0800000000000000
+      internalID: -1131354268035179468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleLogoBK_1
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 40
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d908a91e9d48b3d50800000000000000
+      internalID: 6718109340480995485
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleLogoBK_2
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 40
+        width: 15
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7beceeca371dedb0800000000000000
+      internalID: -4761123689713570947
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleLogoBK_3
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 40
+        width: 14
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 970aeb24203961500800000000000000
+      internalID: 366642057596280953
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleLogoBK_4
+      rect:
+        serializedVersion: 2
+        x: 94
+        y: 40
+        width: 17
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ae270103b27c88a60800000000000000
+      internalID: 7676604553156915946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleLogoBK_5
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 40
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 30dde6e42723e4050800000000000000
+      internalID: 5786618037741214979
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleLogoBK_6
+      rect:
+        serializedVersion: 2
+        x: 132
+        y: 40
+        width: 25
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96e065e95e2aca220800000000000000
+      internalID: 2498551000371433065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleLogoBK_7
+      rect:
+        serializedVersion: 2
+        x: 154
+        y: 40
+        width: 24
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f714c187fd99ae1d0800000000000000
+      internalID: -3320672590160445057
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleLogoBK_8
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 40
+        width: 21
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b8999e761aafeaf0800000000000000
+      internalID: -364886031203723080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleLogoBK_9
+      rect:
+        serializedVersion: 2
+        x: 194
+        y: 40
+        width: 22
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 03d37c2eeaa0a55c0800000000000000
+      internalID: -4226053554088493776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleLogoBK_10
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 40
+        width: 22
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2772235fec20b1050800000000000000
+      internalID: 5772210435305645938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleLogoBK_11
+      rect:
+        serializedVersion: 2
+        x: 23
+        y: 7
+        width: 27
+        height: 31
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4fc45712468c0cdd0800000000000000
+      internalID: -2467752263415411468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleLogoBK_12
+      rect:
+        serializedVersion: 2
+        x: 49
+        y: 7
+        width: 21
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 949f7888e4fe9f5f0800000000000000
+      internalID: -722283144639153847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleLogoBK_13
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 7
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 75da375ad5ceb8d40800000000000000
+      internalID: 5587819649635167575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleLogoBK_14
+      rect:
+        serializedVersion: 2
+        x: 92
+        y: 7
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 916dd421a36c5cdb0800000000000000
+      internalID: -4772190277411678695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleLogoBK_15
+      rect:
+        serializedVersion: 2
+        x: 115
+        y: 7
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 244c1f2c8c6e5b720800000000000000
+      internalID: 2861446888202290242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleLogoBK_16
+      rect:
+        serializedVersion: 2
+        x: 133
+        y: 7
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0424605951cb4da30800000000000000
+      internalID: 4239219950143029824
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleLogoBK_17
+      rect:
+        serializedVersion: 2
+        x: 147
+        y: 7
+        width: 14
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7b47c895dd8c2e1f0800000000000000
+      internalID: -1017029712816606025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleLogoBK_18
+      rect:
+        serializedVersion: 2
+        x: 161
+        y: 7
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5286664b63360b170800000000000000
+      internalID: 8192156808792926245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleLogoBK_19
+      rect:
+        serializedVersion: 2
+        x: 179
+        y: 7
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c080cd500b5d1740800000000000000
+      internalID: 5124352008148517065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleLogoBK_20
+      rect:
+        serializedVersion: 2
+        x: 197
+        y: 7
+        width: 18
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9a6fc897e3b274f60800000000000000
+      internalID: 8018425208883705513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TitleLogoBK_21
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 7
+        width: 20
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e827a64ab9ad27890800000000000000
+      internalID: -7461661270586264946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TitleLogoBK_0: -1131354268035179468
+      TitleLogoBK_1: 6718109340480995485
+      TitleLogoBK_10: 5772210435305645938
+      TitleLogoBK_11: -2467752263415411468
+      TitleLogoBK_12: -722283144639153847
+      TitleLogoBK_13: 5587819649635167575
+      TitleLogoBK_14: -4772190277411678695
+      TitleLogoBK_15: 2861446888202290242
+      TitleLogoBK_16: 4239219950143029824
+      TitleLogoBK_17: -1017029712816606025
+      TitleLogoBK_18: 8192156808792926245
+      TitleLogoBK_19: 5124352008148517065
+      TitleLogoBK_2: -4761123689713570947
+      TitleLogoBK_20: 8018425208883705513
+      TitleLogoBK_21: -7461661270586264946
+      TitleLogoBK_3: 366642057596280953
+      TitleLogoBK_4: 7676604553156915946
+      TitleLogoBK_5: 5786618037741214979
+      TitleLogoBK_6: 2498551000371433065
+      TitleLogoBK_7: -3320672590160445057
+      TitleLogoBK_8: -364886031203723080
+      TitleLogoBK_9: -4226053554088493776
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
