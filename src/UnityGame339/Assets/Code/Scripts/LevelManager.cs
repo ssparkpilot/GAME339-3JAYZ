@@ -87,6 +87,7 @@ public class LevelManager : MonoBehaviour
         Time.timeScale = 0f;
     }
 
+    // Had to get a little bit of help from chatGPT since I haven't worked with canvas switching stuff in a hto minute
     public void RestartGame()
     {
         Time.timeScale = 1f;
