@@ -21,7 +21,7 @@ public class EconomyTower : Turret
     private void MakeMoney()
     {
         LevelManager.main.IncreaseCurrency(currencyWorth);
-        Debug.Log("Tower made money " + currencyWorth);
+        //Debug.Log("Tower made money " + currencyWorth);
         timeUntilFire = 0f;
         
         CreateDeathEffect();
