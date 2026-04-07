@@ -73,7 +73,8 @@ public class Turret : MonoBehaviour
         audioSource.PlayOneShot(placeSound);
     }
 
-    private void FindTarget(){
+    private void FindTarget()
+    {
         RaycastHit2D[] hits = Physics2D.CircleCastAll(transform.position, targetingRange, Vector2.zero, 0f, enemyMask);
 
         if (hits.Length > 0){
@@ -108,6 +109,7 @@ public class Turret : MonoBehaviour
         targetingRange = CalculateRange();
         
         CloseUpgradeUI();
+        Debug.Log("New level: " + level);
         Debug.Log("New BPS: " + bps);
         Debug.Log("New targeting range: " + targetingRange);
         Debug.Log("New cost: " + CalculateCost());
