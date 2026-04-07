@@ -4,40 +4,15 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TurretSlowmo : DeathEffectObject
+public class TurretSlowmo : Turret
 {
     [Header("References")]
-    [SerializeField] private LayerMask enemyMask;
-    [SerializeField] private GameObject upgradeUI;
-    [SerializeField] private Button upgradeButton;
     
     [Header("Attribute")]
-    [SerializeField] private float targetingRange = 3f;
-    [SerializeField] private float aps = 4f; // attacks per second
     [SerializeField] private float freezeTime = 1f;
-    [SerializeField] private int baseUpgradeCost = 100;
     
-    private float apsBase;
-    private float targetingRangeBase;
     
-    private int level = 1; // tower upgrade level
-    
-    private float timeUntilFire;
-
-    public AudioSource audioSource;
     public AudioClip fireSound;
-
-
-    public float minPitch = 0.8f;
-    public float maxPitch = 1.2f;
-
-    private void Start()
-    {
-        apsBase = aps;
-        targetingRangeBase = targetingRange;
-        
-        upgradeButton.onClick.AddListener(Upgrade);
-    }
     
     private void Update()
     {
@@ -81,49 +56,6 @@ public class TurretSlowmo : DeathEffectObject
         yield return new WaitForSeconds(freezeTime);
         
         em.ResetSpeed();
-    }
-    
-    public void OpenUpgradeUI()
-    {
-        upgradeUI.SetActive(true);
-    }
-
-    public void CloseUpgradeUI()
-    {
-        upgradeUI.SetActive(false);
-        UIManager.main.SetHoveringState(false);
-    }
-
-    public void Upgrade()
-    {
-        if (CalculateCost() > LevelManager.main.currency) return;
-        
-        LevelManager.main.SpendCurrency(CalculateCost());
-
-        level++;
-
-        aps = CalculateAPS();
-        targetingRange = CalculateRange();
-        
-        CloseUpgradeUI();
-        Debug.Log("New BPS: " + aps);
-        Debug.Log("New targeting range: " + targetingRange);
-        Debug.Log("New cost: " + CalculateCost());
-    }
-
-    private int CalculateCost()
-    {
-        return Mathf.RoundToInt(baseUpgradeCost * Mathf.Pow(level, 0.8f));
-    }
-
-    private float CalculateAPS()
-    {
-        return apsBase * Mathf.Pow(level, 0.6f);
-    }
-
-    private float CalculateRange()
-    {
-        return targetingRangeBase * Mathf.Pow(level, 0.4f);
     }
     
     private void OnDrawGizmosSelected(){

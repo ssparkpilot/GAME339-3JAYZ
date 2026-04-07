@@ -158,7 +158,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 3, y: -1}
+  m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 300, y: 300}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &2831719615449827066
@@ -485,16 +485,21 @@ MonoBehaviour:
   enemyMask:
     serializedVersion: 2
     m_Bits: 64
+  bulletPrefab: {fileID: 0}
+  firingPoint: {fileID: 0}
   upgradeUI: {fileID: 3493066794072906397}
   upgradeButton: {fileID: 8047296925045566966}
   targetingRange: 4
-  aps: 0.25
-  freezeTime: 1
+  bps: 1
   baseUpgradeCost: 100
+  targetingRangeBase: 0
   audioSource: {fileID: 3299563007527577936}
-  fireSound: {fileID: 8300000, guid: 74267a80414580442ac2cf96ec8a8681, type: 3}
+  placeSound: {fileID: 0}
   minPitch: 0.8
   maxPitch: 1.2
+  aps: 0.25
+  freezeTime: 1
+  fireSound: {fileID: 8300000, guid: 74267a80414580442ac2cf96ec8a8681, type: 3}
 --- !u!82 &3299563007527577936
 AudioSource:
   m_ObjectHideFlags: 0

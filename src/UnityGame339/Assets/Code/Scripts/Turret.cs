@@ -2,25 +2,29 @@ using UnityEngine;
 using UnityEditor;
 using UnityEngine.UI;
 
-public class Turret : MonoBehaviour
+public class Turret : DeathEffectObject
 {
     [Header("References")]
-    [SerializeField] private LayerMask enemyMask;
+    [SerializeField] public LayerMask enemyMask;
     [SerializeField] private GameObject bulletPrefab;
     [SerializeField] private Transform firingPoint;
     [SerializeField] private GameObject upgradeUI;
     [SerializeField] private Button upgradeButton;
 
     [Header("Attribute")]
-    [SerializeField] private float targetingRange = 3f;
+    [SerializeField] public float targetingRange = 3f;
     [SerializeField] private float bps = 1f; // bullets per second
+    [SerializeField] public float aps = 4f; // attacks per second
+    [SerializeField] public float mps = 4f; // money per second
     [SerializeField] private int baseUpgradeCost = 100;
+    [SerializeField] private float targetingRangeBase;
 
     private float bpsBase;
-    private float targetingRangeBase;
+    private float apsBase;
+    private float mpsBase;
     
     private Transform target;
-    private float timeUntilFire;
+    public float timeUntilFire;
 
     private int level = 1; // tower upgrade level
 
@@ -33,6 +37,9 @@ public class Turret : MonoBehaviour
     private void Start()
     {
         bpsBase = bps;
+        apsBase = aps;
+        mpsBase = mps;
+        
         targetingRangeBase = targetingRange;
         
         upgradeButton.onClick.AddListener(Upgrade);
@@ -106,6 +113,9 @@ public class Turret : MonoBehaviour
         level++;
 
         bps = CalculateBPS();
+        aps = CalculateAPS();
+        mps = CalculateMPS();
+        
         targetingRange = CalculateRange();
         
         CloseUpgradeUI();
@@ -123,6 +133,16 @@ public class Turret : MonoBehaviour
     private float CalculateBPS()
     {
         return bpsBase * Mathf.Pow(level, 0.6f);
+    }
+    
+    private float CalculateAPS()
+    {
+        return apsBase * Mathf.Pow(level, 0.6f);
+    }
+    
+    private float CalculateMPS()
+    {
+        return mpsBase * Mathf.Pow(level, 0.6f);
     }
 
     private float CalculateRange()
