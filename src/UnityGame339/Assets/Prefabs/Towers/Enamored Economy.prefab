@@ -463,7 +463,7 @@ GameObject:
   - component: {fileID: 5532547775820895770}
   - component: {fileID: 8289862568040345624}
   m_Layer: 0
-  m_Name: Enamored Economy Tower
+  m_Name: Enamored Economy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -566,13 +566,15 @@ MonoBehaviour:
   upgradeButton: {fileID: 8399478642337921754}
   targetingRange: 3
   bps: 1
+  aps: 4
+  mps: 0.5
   baseUpgradeCost: 100
   targetingRangeBase: 0
+  towerIndex: 0
   timeUntilFire: 0
   audioSource: {fileID: 0}
   placeSound: {fileID: 0}
   minPitch: 0.8
   maxPitch: 1.2
-  mps: 0.5
   currencyWorth: 10
   FloatingScorePrefab: {fileID: 8314382623674587284, guid: a488bb93b9dff4317b7afb0ce4ae2e34, type: 3}
