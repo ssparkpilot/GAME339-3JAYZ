@@ -13,6 +13,10 @@ public class Plot : MonoBehaviour
     [SerializeField] private Color invalidColor = Color.red;
     [SerializeField] private Color unaffordableColor = Color.gray;
     
+    [Header("Floating Text")]
+    [SerializeField] private FloatingText floatingTextPrefab;
+    [SerializeField] private Vector3 floatingTextOffset = new Vector3(0f, 0.5f, 0f);
+    
     public GameObject towerObj;
     public Turret turret;
     private Color startColor;
@@ -85,6 +89,8 @@ public class Plot : MonoBehaviour
 
             int refund = GetSellValue();
             LevelManager.main.AddCurrency(refund);
+            
+            SpawnFloatingText(refund);
 
             Destroy(towerObj);
             towerObj = null;
@@ -244,29 +250,18 @@ public class Plot : MonoBehaviour
 
         return baseTower.cost / 2; // returns half tower cost
     }
-
-
-    private void InstantiateDialogueLove()
+    
+    private void SpawnFloatingText(int amount)
     {
-        GameObject DialogueFloater = Instantiate(DialoguePrefab, transform.position + Vector3.up * 0.5f, Quaternion.identity);
-                DialogueFloater.GetComponent<FloatLove>().SetTextLove();
-    }
+        if (floatingTextPrefab == null)
+            return;
 
-    private void InstantiateDialogueCant()
-    {
-        GameObject DialogueFloater = Instantiate(DialoguePrefab, transform.position + Vector3.up * 0.5f, Quaternion.identity);
-                DialogueFloater.GetComponent<FloatLove>().SetTextCant();
-    }
+        FloatingText ft = Instantiate(
+            floatingTextPrefab,
+            transform.position + floatingTextOffset,
+            Quaternion.identity
+        );
 
-    private void InstantiateDialoguePoor()
-    {
-        GameObject DialogueFloater = Instantiate(DialoguePrefab, transform.position + Vector3.up * 0.5f, Quaternion.identity);
-                DialogueFloater.GetComponent<FloatLove>().SetTextPoor();
-    }
-
-    private void InstantiateDialogueNew()
-    {
-        GameObject DialogueFloater = Instantiate(DialoguePrefab, transform.position + Vector3.up * 0.5f, Quaternion.identity);
-                DialogueFloater.GetComponent<FloatLove>().SetTextNew();
+        ft.SetText(amount);
     }
 }
