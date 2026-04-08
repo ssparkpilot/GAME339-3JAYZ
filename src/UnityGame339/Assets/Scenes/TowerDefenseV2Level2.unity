@@ -4711,10 +4711,10 @@ MonoBehaviour:
     prefab: {fileID: 4187840636404338716, guid: b65cb9d16946f4ff4b8a3811d47f926a, type: 3}
   - name: Sniper Tower
     cost: 300
-    prefab: {fileID: 791941214108099732, guid: 448e054bed0439142a9184d27ded0e51, type: 3}
+    prefab: {fileID: 741713214009842459, guid: 34856335ac18468438ef65f2d0e778f8, type: 3}
   - name: Sniper MK2
     cost: 600
-    prefab: {fileID: 3471668403744897720, guid: bd8ca64339e28194a9b76c89a323c95b, type: 3}
+    prefab: {fileID: 3357083038367885493, guid: 76a450b7c53961b408c74d8f29449cba, type: 3}
 --- !u!82 &798997880
 AudioSource:
   m_ObjectHideFlags: 0
