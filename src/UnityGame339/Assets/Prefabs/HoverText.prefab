@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &8314382623674587284
+--- !u!1 &5750130495279023985
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,41 +8,40 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 571585908629682352}
-  - component: {fileID: 7318132897275332165}
-  - component: {fileID: 2584140733611713213}
-  - component: {fileID: 5818800042018071548}
-  - component: {fileID: 6173107996845938630}
-  - component: {fileID: -4766773769910150475}
+  - component: {fileID: 2170102374055949246}
+  - component: {fileID: 2357694521938667780}
+  - component: {fileID: 7305069602005931720}
+  - component: {fileID: 4502771529295495643}
+  - component: {fileID: -4168721090338785409}
   m_Layer: 0
-  m_Name: ScoreFloater
+  m_Name: HoverText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &571585908629682352
+  m_IsActive: 0
+--- !u!4 &2170102374055949246
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8314382623674587284}
+  m_GameObject: {fileID: 5750130495279023985}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 500, y: 500, z: 0}
+  m_LocalPosition: {x: 0, y: 4.8, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!23 &7318132897275332165
+--- !u!23 &2357694521938667780
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8314382623674587284}
+  m_GameObject: {fileID: 5750130495279023985}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -58,8 +57,8 @@ MeshRenderer:
   m_SmallMeshCulling: 1
   m_ForceMeshLod: -1
   m_MeshLodSelectionBias: 0
-  m_RenderingLayerMask: 1
-  m_RendererPriority: 1
+  m_RenderingLayerMask: 3
+  m_RendererPriority: 0
   m_Materials:
   - {fileID: 10100, guid: 0000000000000000e000000000000000, type: 0}
   m_StaticBatchInfo:
@@ -85,62 +84,49 @@ MeshRenderer:
   m_SortingOrder: 0
   m_MaskInteraction: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!102 &2584140733611713213
+--- !u!102 &7305069602005931720
 TextMesh:
   serializedVersion: 3
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8314382623674587284}
-  m_Text: + 20
+  m_GameObject: {fileID: 5750130495279023985}
+  m_Text: + 100
   m_OffsetZ: 0
-  m_CharacterSize: 0.4
+  m_CharacterSize: 1
   m_LineSpacing: 1
-  m_Anchor: 0
+  m_Anchor: 4
   m_Alignment: 1
   m_TabSize: 4
-  m_FontSize: 0
-  m_FontStyle: 1
+  m_FontSize: 10
+  m_FontStyle: 0
   m_RichText: 1
-  m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+  m_Font: {fileID: 0}
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
---- !u!114 &5818800042018071548
+--- !u!114 &4502771529295495643
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8314382623674587284}
+  m_GameObject: {fileID: 5750130495279023985}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8428befce671048729b6605068989dae, type: 3}
+  m_Script: {fileID: 11500000, guid: 6260c8f0136de4254b821d0fb9a5ba53, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FloatingText
-  textMesh: {fileID: 2584140733611713213}
-  speed: 1
---- !u!114 &6173107996845938630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8314382623674587284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9ff63421878aa4132931978eb5a81376, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::DelayedSelfDestruct
-  DelayInSeconds: 1
---- !u!210 &-4766773769910150475
+  m_EditorClassIdentifier: Assembly-CSharp::HoverText
+  textMesh: {fileID: 7305069602005931720}
+  offset: {x: 0, y: 0.8, z: 0}
+--- !u!210 &-4168721090338785409
 SortingGroup:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8314382623674587284}
+  m_GameObject: {fileID: 5750130495279023985}
   m_Enabled: 1
   m_SortingLayerID: 0
   m_SortingLayer: 0

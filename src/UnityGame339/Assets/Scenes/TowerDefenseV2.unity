@@ -14616,6 +14616,10 @@ PrefabInstance:
       propertyPath: DialoguePrefab
       value: 
       objectReference: {fileID: 8314382623674587284, guid: a231c23a1331d2342a82e928e206f6e3, type: 3}
+    - target: {fileID: 5446699142369605443, guid: 9bcac7c37faa685498e2944ec461843d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6455910030153953359, guid: 9bcac7c37faa685498e2944ec461843d, type: 3}
       propertyPath: m_Name
       value: Plot (1)

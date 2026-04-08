@@ -17,6 +17,9 @@ public class Plot : MonoBehaviour
     [SerializeField] private FloatingText floatingTextPrefab;
     [SerializeField] private Vector3 floatingTextOffset = new Vector3(0f, 0.5f, 0f);
     
+    [Header("Hover Text")]
+    [SerializeField] private HoverText hoverText;
+    
     public GameObject towerObj;
     public Turret turret;
     private Color startColor;
@@ -44,10 +47,16 @@ public class Plot : MonoBehaviour
         if (BuildManager.main.CurrentMode == BuildMode.Shovel)
         {
             if (towerObj != null)
+            {
                 sr.color = unaffordableColor;
+                ShowHoverText();
+            }
             else
+            {
                 sr.color = startColor;
-
+                HideHoverText();
+            }
+            
             return;
         }
 
@@ -55,28 +64,33 @@ public class Plot : MonoBehaviour
         if (BuildManager.main.GetSelectedTower() == null)
         {
             ResetPlotColor();
+            
             return;
         }
 
         if (!IsCorrectPlacementType())
         {
             sr.color = invalidColor; // invalid upgrade
+           
             return;
         }
 
         if (!CanAffordPlacement())
         {
             sr.color = unaffordableColor;
+            
             return;
         }
-
+        
         sr.color = validColor;
     }
 
     private void OnMouseExit()
     {
         if (LevelManager.main.isGameOver) return;
+        
         ResetPlotColor();
+        HideHoverText();
     }
 
     private void OnMouseDown()
@@ -101,6 +115,7 @@ public class Plot : MonoBehaviour
             sr.color = startColor;
             
             BuildManager.main.ClearSelection(); // removes shovel ghost
+            HideHoverText();
             
             return;
         }
@@ -290,5 +305,51 @@ public class Plot : MonoBehaviour
     {
         GameObject DialogueFloater = Instantiate(DialoguePrefab, transform.position + Vector3.up * 0.5f, Quaternion.identity);
         DialogueFloater.GetComponent<FloatLove>().SetTextNew();
+    }
+    
+    private void ShowHoverText()
+    {
+        Debug.Log("Ran ShowHoverText");
+        if (hoverText == null) return;
+
+        // shovel
+        if (BuildManager.main.CurrentMode == BuildMode.Shovel)
+        {
+            if (towerObj == null)
+                return;
+
+            int refund = GetSellValue();
+            hoverText.Show($"+ {refund}", transform.position);
+            Debug.Log("ShowHoverText: " + refund);
+            return;
+        }
+
+        Tower selectedTower = BuildManager.main.GetSelectedTower();
+        if (selectedTower == null)
+            return;
+
+        // empty
+        if (towerObj == null)
+        {
+            hoverText.Show($"Cost: {selectedTower.cost}", transform.position);
+            Debug.Log("ShowHoverText: " + selectedTower.cost);
+            return;
+        }
+
+        // upgrade
+        int upgradeIndex = turret.towerIndex + 1;
+        Tower upgradeTower = BuildManager.main.GetTowerByIndex(upgradeIndex);
+
+        if (upgradeTower != null)
+        {
+            hoverText.Show($"Upgrade: {upgradeTower.cost}", transform.position);
+            Debug.Log("ShowHoverText: " + upgradeIndex);
+        }
+    }
+    
+    private void HideHoverText()
+    {
+        if (hoverText != null)
+            hoverText.Hide();
     }
 }
