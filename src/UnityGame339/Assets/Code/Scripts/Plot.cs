@@ -22,11 +22,14 @@ public class Plot : MonoBehaviour
     private Color startColor;
     public AudioSource audioSource;
     public AudioClip placeSound;
+    public AudioClip digSound;
 
     public AudioClip cantplaceSound;
 
     public float minPitch = 0.8f;
     public float maxPitch = 1.2f;
+
+    public GameObject DialoguePrefab;
 
     private void Start()
     {
@@ -93,7 +96,7 @@ public class Plot : MonoBehaviour
             towerObj = null;
             turret = null;
 
-            audioSource.PlayOneShot(placeSound);
+            audioSource.PlayOneShot(digSound);
 
             sr.color = startColor;
             return;
@@ -107,6 +110,13 @@ public class Plot : MonoBehaviour
             if (!IsCorrectPlacementType() || !CanAffordPlacement())
             {
                 audioSource.PlayOneShot(cantplaceSound);
+
+
+                
+                if(!IsCorrectPlacementType())
+                    InstantiateDialogueCant();
+                else if (!CanAffordPlacement())
+                    InstantiateDialoguePoor();
                 return;
             }
         }
@@ -141,6 +151,9 @@ public class Plot : MonoBehaviour
                 if (upgradeTower.cost > LevelManager.main.currency)
                 {
                     audioSource.PlayOneShot(cantplaceSound);
+
+             
+
                     return;
                 }
 
@@ -153,6 +166,11 @@ public class Plot : MonoBehaviour
                 turret = towerObj.GetComponent<Turret>();
 
                 audioSource.PlayOneShot(placeSound);
+                //this plays when the tower is upgraded
+                InstantiateDialogueLove();
+
+            
+
                 ResetPlotColor();
             }
 
@@ -165,6 +183,7 @@ public class Plot : MonoBehaviour
         if (selectedTowerData.cost > LevelManager.main.currency)
         {
             audioSource.PlayOneShot(cantplaceSound);
+
             return;
         }
 
@@ -172,6 +191,8 @@ public class Plot : MonoBehaviour
 
         towerObj = BuildManager.main.PlaceTower(transform.position);
         turret = towerObj.GetComponent<Turret>();
+        //this plays when the tower is initially placed down
+        InstantiateDialogueNew();
 
         audioSource.PlayOneShot(placeSound);
         ResetPlotColor();

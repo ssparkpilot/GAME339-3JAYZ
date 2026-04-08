@@ -432,6 +432,7 @@ MonoBehaviour:
   firingPoint: {fileID: 8707586273053261682}
   upgradeUI: {fileID: 5315144331807464256}
   upgradeButton: {fileID: 2085787843895623269}
+  dialoguePrefab: {fileID: 8314382623674587284, guid: a231c23a1331d2342a82e928e206f6e3, type: 3}
   targetingRange: 6
   bps: 1
   aps: 4

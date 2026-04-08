@@ -11,11 +11,12 @@ GameObject:
   - component: {fileID: 571585908629682352}
   - component: {fileID: 7318132897275332165}
   - component: {fileID: 2584140733611713213}
-  - component: {fileID: 5818800042018071548}
   - component: {fileID: 6173107996845938630}
   - component: {fileID: -4766773769910150475}
+  - component: {fileID: 6124854123813985992}
+  - component: {fileID: 3479567309642932191}
   m_Layer: 0
-  m_Name: ScoreFloater
+  m_Name: TowerDialogueFloater
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93,11 +94,11 @@ TextMesh:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8314382623674587284}
-  m_Text: + 10
+  m_Text: ILUV
   m_OffsetZ: 0
   m_CharacterSize: 0.4
   m_LineSpacing: 1
-  m_Anchor: 0
+  m_Anchor: 1
   m_Alignment: 1
   m_TabSize: 4
   m_FontSize: 0
@@ -107,20 +108,6 @@ TextMesh:
   m_Color:
     serializedVersion: 2
     rgba: 4294967295
---- !u!114 &5818800042018071548
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8314382623674587284}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8428befce671048729b6605068989dae, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::FloatingText
-  textMesh: {fileID: 2584140733611713213}
-  speed: 1
 --- !u!114 &6173107996845938630
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -133,7 +120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9ff63421878aa4132931978eb5a81376, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DelayedSelfDestruct
-  DelayInSeconds: 1
+  DelayInSeconds: 3
 --- !u!210 &-4766773769910150475
 SortingGroup:
   m_ObjectHideFlags: 0
@@ -142,8 +129,42 @@ SortingGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8314382623674587284}
   m_Enabled: 1
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingLayerID: -1709485065
+  m_SortingLayer: 2
+  m_SortingOrder: 8
   m_SortAtRoot: 0
   m_Sort3DAs2D: 0
+--- !u!114 &6124854123813985992
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8314382623674587284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c3d55b8775836bb48b5df05326345b29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FloatingLove
+  textMesh: {fileID: 2584140733611713213}
+  CantDateFile: {fileID: 4900000, guid: 80bf49d539c24cc48b398bee480aa922, type: 3}
+  LoveFile: {fileID: 4900000, guid: 363ca4fe59e8de34e8e728e6404391f1, type: 3}
+  PoorFile: {fileID: 4900000, guid: d5e9abfdd7bd9a94181448697f10546d, type: 3}
+  NewFile: {fileID: 4900000, guid: d8cb073049d390f489dbdc2f4a7290a4, type: 3}
+  speed: 1
+  Loveis1NoLoveis0: 0
+--- !u!114 &3479567309642932191
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8314382623674587284}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e741851cba3ad425c91ecf922cc6b379, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.VisualScripting.Core::Unity.VisualScripting.Variables
+  _data:
+    _json: '{"declarations":{"Kind":"Object","collection":{"$content":[],"$version":"A"},"$version":"A"}}'
+    _objectReferences: []
