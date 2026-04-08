@@ -4647,6 +4647,7 @@ MonoBehaviour:
   isGameOver: 0
   healthText: {fileID: 21886188}
   gameOverCanvas: {fileID: 1200047738}
+  gameWinCanvas: {fileID: 1632492807}
   startPoint: {fileID: 1633134300}
   path:
   - {fileID: 979593812}
@@ -4700,6 +4701,7 @@ MonoBehaviour:
   timeBetweenWaves: 5
   difficultyScalingFactor: 0.75
   enemiesPerSecondCap: 15
+  maxWaves: 10
   audioSource: {fileID: 798997880}
   chudSound: {fileID: 8300000, guid: 9385e00179fe1af499de6862cda7f4d7, type: 3}
   startSound: {fileID: 8300000, guid: 87b95e059cfba3f4582c112ad3157b71, type: 3}
