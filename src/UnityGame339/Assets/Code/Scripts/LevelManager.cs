@@ -25,8 +25,8 @@ public class LevelManager : MonoBehaviour
 
     private void Start()
 {
-    playerHealth = 100;
-    currency = 100;
+    //playerHealth = 100;
+    //currency = 100;
     isGameOver = false;
 
     UpdateHealthUI();

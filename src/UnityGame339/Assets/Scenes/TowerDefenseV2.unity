@@ -5131,7 +5131,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   playerHealth: 100
   isGameOver: 0
-  currency: 100
+  currency: 300
   healthText: {fileID: 21886188}
   gameOverCanvas: {fileID: 1200047738}
   gameWinCanvas: {fileID: 1389644527}
