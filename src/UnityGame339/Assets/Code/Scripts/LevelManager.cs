@@ -114,6 +114,7 @@ public class LevelManager : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Debug.Log("restart game");
     }
 
     public void WinGame()
